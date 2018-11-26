@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Interno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+				body{
+					padding: 100px;
+				}
+        .parrafoBienvenida{
+            color: aqua;
+        }
+        .titleGrande{
+            font-size: 400%;
+        }
+        #pequeno{
+            font-size: 50%;
+        }
+        #primeraSeccion{
+            color:blueviolet;
+            background-color: chartreuse;
+            width: 200px;
+            float: right;
+						margin: 10px 20px 15px 10px;
+        }
+        #segundaSeccion{
+            color: aqua;
+            background-color: beige;
+            width:300px;
+            float: left;
+        }
+        .clear_float{
+            clear: both;
+        }
+        #divRelativo{
+            position:relative;
+            left: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="parrafoBienvenida titleGrande">Pagina web con css interno</h1>
+    <p class="parrafoBienvenida">Hola Mundo!</p>
+    <p class="parrafoBienvenida" id="pequeno">Un parrrafo pequeño</p>
+
+    <div id="primeraSeccion">
+        <p>Esta es una sección especial</p>
+        <p>Su contenido hace parte de la misma sección</p>
+    </div>
+    <p>Texto en el medio</p>
+    <div id="segundaSeccion">
+        <p>Esta es la ultima sección</p>
+    </div>
+    <p>Texto al lado</p>
+    <p class="clear_float">Esto es un pie de pagina</p>
+
+    <div id="divRelativo">
+        <p>Esto es un parrafo con posicionamiento relativo</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Primera página web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        body{
+            background-color: black;
+            margin: 0%;
+            padding: 0%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        div{
+            width: 900px;
+            margin: 5em auto;
+            padding: 50px;
+            background-color: white;
+            border-radius: 1em;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Bienvenido</h1>
+        <p>Mi primera página web</p>
+        <p>Indice:
+            <ul>
+                <li><a href="#formato_parrafos">Formato de texto</a></li>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+                <li><a href="#tabla">Tabla</a></li>
+            </ul>
+        </p>
+        <p id="formato_parrafos">Un texto puede ser formateado de la siguiente forma:
+            <ul>
+                <li>Text: <b>Negrita</b></li>
+                <li>Text: <i>Italica</i></li>
+                <li>Text: <u>Subrayado</u></li>
+                <li>Text: <del>Tachado</del></li>
+                <li>Text: <sup>Super indice</sup></li>
+                <li>Text: <sub>Sub indice</sub></li>
+            </ul>
+        </p>
+        <p id="listas">
+            Una lista ordenada:
+            <ol start="10">
+                <li>Primer item</li>
+                <li>Segundo item</li>
+                <li>Tercer item</li>
+            </ol>
+            <ol reversed type="A">
+                <li>Primer item</li>
+                <li>Segundo item</li>
+                <li>Tercer item</li>
+            </ol>
+        </p>
+        
+        <p style="text-align:center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Mickey_Mouse_head_and_ears.png" width="100">
+        </p>
+
+        <form id="formulario">
+            <p style="text-align:center"><input type="text" placeholder="Tu usuario"></p>
+            <p style="text-align:center"><input type="password" placeholder="Tu password"></p>
+            <p>Genero:</p>
+            <p><input type="radio" name="genero" value="hombre"> Hombre</p>
+            <p><input type="radio" name="genero" value="mujer"> Mujer</p>
+            <p><input type="checkbox"> Permanecer conectado</p>
+            <p>Qué te gusta?</p>
+            <p>
+                <select>
+                    <option>Pizza</option>
+                    <option selected>Helados</option>
+                    <option>Hamburguesa</option>
+                </select>
+            </p>
+            <input type="submit" value="Registar">
+        </form>
+
+        <p>Una tabla:</p>
+        
+        <p id="tabla">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Color favorito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Antonio</td>
+                        <td>Naranja</td>
+                    </tr>
+                    <tr>
+                        <td>Monica</td>
+                        <td>Amarillo</td>
+                    </tr>
+                    <tr>
+                        <td>Sanitiago</td>
+                        <td>Negro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>Haz <a href="https://www.google.com">Click aquí</a>  para ir a Google</p>
+        <p>
+            <a href="https://www.google.com">
+                <img src="https://ichef.bbci.co.uk/news/ws/624/amz/worldservice/live/assets/images/2015/09/01/150901183241_google_624x351_google_nocredit.jpg" alt="">
+            </a>
+        </p>
+        <p>O si lo prefieres busca aquí mismo</p>
+        <iframe src="https://youtube.com/embed/DhtWp2cQM_8" allowfullscreen frameborder="0" width="500" height="500"></iframe>
+    </div>
+</body>
+</html>
