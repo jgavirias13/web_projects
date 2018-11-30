@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cuantos Dedos tengo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Cuantos dedos tengo?</h1>
+    <p>Adivina adivinador, cuantos dedos tengo hoy?</p>
+    <input id="dedos" placeholder="Número de dedos" type="number">
+    <button id="responder" onclick="verificar()">Enviar</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function verificar(){
+            var numero = Math.floor(Math.random() * 6);
+            var respuesta = document.getElementById("dedos").value;
+            var mensaje = document.getElementById("mensaje");
+
+            var intentos = 1;
+
+            while(numero != respuesta){
+                intentos++;
+                numero = Math.floor(Math.random() * 6);
+            }
+            
+            mensaje.innerText = "Lo has conseguido al " + intentos + " intento";
+        }
+    </script>
+</body>
+</html>

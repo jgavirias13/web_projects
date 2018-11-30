@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input id="usuario" type="text" placeholder="Usuario">
+    <button id="iniciarSesion" onclick="iniciarSesion()">Iniciar sesión</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function iniciarSesion(){
+            var usuario = document.getElementById("usuario").value;
+            document.getElementById("mensaje")
+                .innerHTML = "Bienvenido " + usuario;
+        }
+    </script>
+</body>
+</html>

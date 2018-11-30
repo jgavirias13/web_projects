@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        //Creacion de un nuevo arreglo
+        var array = new Array();
+        //Inicializacion del arreglo
+        array = ["Buenos días", "Buenas tardes", "Buenas noches"]
+        console.log(array)
+        //Agregar un nuevo elemento
+        array.push("Hasta mañana");
+        console.log(array);
+        //Sacar el ultimo elemento
+        console.log(array.pop());
+        console.log(array);
+        //Eliminar un elemento partiendo de la posicion 1
+        array.splice(1, 1);
+        console.log(array);
+        //Agregar un elemento en la posicion 1
+        array.splice(1, 0, "Buenas tardes");
+        console.log(array);
+    </script>
+</body>
+</html>

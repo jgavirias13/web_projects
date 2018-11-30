@@ -1,0 +1,28 @@
+.titulo{
+    text-align: center;
+    color: gray;
+}
+
+.descripcion{
+    margin-left: 10px;
+}
+
+#tiempo{
+    margin-left: 10px;
+}
+
+#forma{
+    width: 260px;
+    height: 260px;
+    background-color: blueviolet;
+    position: relative;
+}
+
+.container{
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
