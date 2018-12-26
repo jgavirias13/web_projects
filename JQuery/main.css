@@ -1,0 +1,17 @@
+.circulo{
+    border-radius: 50%;
+}
+
+.circulo_verde{
+    background-color: green;
+}
+
+.figura{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.cuadrado_rojo{
+    background-color: red;
+}
