@@ -1,0 +1,38 @@
+body{
+  font-family: helvetica, sans-serif;
+  font-size: 150%;
+}
+
+input{
+  height: 40px;
+  padding: 5px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+label{
+  position: relative;
+  top: 10px;
+  width: 220px;
+  float: left;
+}
+
+#container{
+  width: 650px;
+  margin: 0 auto;
+}
+
+#btnEnviar{
+  width:200px;
+  margin-left: 220px;
+}
+
+.elemento{
+  margin-bottom: 10px;
+}
+
+#mensaje{
+  color:red;
+  font-size: 80%;
+}

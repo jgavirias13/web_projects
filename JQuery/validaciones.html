@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Validaciones</title>
+    <link rel="stylesheet" href="validaciones.css">
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="mensaje"></div>
+      <div class="elemento">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" 
+          placeholder="Ej. nombre@dominio.com">
+      </div>
+
+      <div class="elemento">
+        <label for="telefono">Telefono</label>
+        <input type="number" name="telefono" id="telefono" 
+          placeholder="Ej. 3009874565">
+      </div>
+
+      <div class="elemento">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" 
+          placeholder="Copia tu password">
+      </div>
+
+      <div class="elemento">
+        <label for="confPassword">Confirmar password</label>
+        <input type="password" name="confPassword" id="confPassword" 
+          placeholder="Confirma tu password">
+      </div>
+
+      <div class="elemento">
+        <input type="submit" id="btnEnviar" value="Darse de alta">
+      </div>
+
+      <script src="validaciones.js"></script>
+    </div>
+  </body>
+</html>
