@@ -1,0 +1,13 @@
+#cuadradoAmarillo{
+  width:200px;
+  height:200px;
+  float:left;
+  background-color:yellow;
+}
+
+#cuadradoAzul{
+  width:100px;
+  height:100px;
+  float:left;
+  background-color:aqua;
+}

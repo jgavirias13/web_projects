@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User interface</title>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+    <style>
+      #contenedor{
+        background-color:blue;
+        width:400px;
+        height:300px;
+      }
+    </style>
+
+    <script>
+      $(function(){
+        $("#draggable").draggable();
+        //Hacer que el objeto solo se pueda mover dentro del contenedor
+        $("#draggable").draggable({ containment: "#contenedor" });
+        $("#contenedor").resizable({
+          grid: 50
+        });
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <div id="contenedor">
+      <span id="draggable">Hola amiguitos</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Code Player</title>
+    <script src="../jquery-3.3.1.min.js"</script>
+    <script src="../jquery-ui/jquery-ui.js"</script>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="ReproductorCodigo.css">
+    <script src="ReproductorCodigo.js"></script>
+  </head>
+
+  <body>
+    <div id="encabezado">
+      <div id="logo">
+        CodePlayer
+      </div>
+
+      <div id="contenedorBotones">
+        <div class="boton botonEnfocado" id="html">HTML</div>
+        <div class="boton" id="css">CSS</div>
+        <div class="boton" id="javascript">JavaScript</div>
+        <div class="boton botonEnfocado" id="output">Output</div>
+      </div>
+    </div>
+
+    <div id="contenedorBody">
+      <textarea id="htmlPanel" class="panel"><p>Hola a todos</p></textarea>
+      <textarea id="cssPanel" class="panel panelOculto">p{color:green;}</textarea>
+      <textarea id="javascriptPanel" class="panel panelOculto"></textarea>
+      <iframe id="outputPanel" class="panel"></iframe>
+    </div>
+
+  </body>
+<html>
