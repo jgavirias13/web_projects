@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi aplicacion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" class="scrollSpyer">
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-info fixed-top">
+        <a class="navbar-brand" href="miApp.html">
+            <img src="img/helios-logo.png" width="36" height="36">
+            Helios
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#jumbotron">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#acerca">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Consiguela</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="miApp.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron bg-light" style="text-align:center;" id="jumbotron">
+        <h1 class="display-4">Helios Server</h1>
+        <p class="lead text-success">Todo esta controlado</p>
+        <hr class="m-y-2">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Comando rapido</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Comando rapido"></textarea>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center;" id="acerca">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img class="card-img-top" src="img/planta.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoreo de vegetación</h4>
+                        <p class="card-text text-success">
+                            98% de vitalidad
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img class="card-img-top" src="img/seguridad.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoreo de seguridad</h4>
+                        <p class="card-text text-danger">
+                            3 afectaciones
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img class="card-img-top" src="img/acuario.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoreo de acuario</h4>
+                        <p class="card-text text-warning">
+                            52% de vitalidad
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small bg-info pt-4" id="footer">
+        <div class="footer-copyright text-center py-3">2019 Copyright</div>
+    </footer>
+</body>
+</html>
