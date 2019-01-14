@@ -1,0 +1,20 @@
+body{
+    background-image: url(img/background.jpg);
+}
+
+.container{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.texto_blanco{
+    color: white;
+}
+
+.form-control{
+    margin-bottom: 50px;
+}
+
+#textoClima{
+    margin-top: 10px;
+}
