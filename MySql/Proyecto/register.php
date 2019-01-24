@@ -1,5 +1,40 @@
 <?php
-
+    if($_POST){
+        $usuario = $_POST['usuario'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        $error = "";
+        if($usuario and $password and $email){
+            $conexion = mysqli_connect("192.168.0.16", "root", "jpGS1037649970", "midiario");
+            if($conexion){
+                $usuario = mysqli_real_escape_string($conexion, $usuario);
+                $password = password_hash($password, PASSWORD_DEFAULT);
+                $email = mysqli_real_escape_string($conexion, $email);
+                $query = "Select usuario from usuarios where usuario = '".$usuario."'";
+                $resultado = mysqli_query($conexion, $query);
+                if(mysqli_num_rows($resultado) == 0){
+                    $query = "Insert into usuarios (usuario, password, email) values ('".$usuario
+                        ."', '".$password."', '".$email."')";
+                    $resultado = mysqli_query($conexion, $query);
+                    if($resultado){
+                        error_log("Exitoso!");
+                    }else{
+                        $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                            No se puede establecer conexión. Intenta más tarde</strong></div>";
+                    }
+                }else{
+                    $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                        El usuario ya existe</strong></div>";
+                }
+            }else{
+                $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                    No se puede establecer conexión. Intenta más tarde</strong></div>";
+            }
+        }else{
+            $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                Ingresa todos los campos para continuar</strong></div>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +55,7 @@
     <div class="container formulario">
         <h1 class="text-dark">Mi diario secreto</h1>
         <h3 class="text-dark">Registro</h2>
-        <div id="error"></div>
+        <div id="error"><?php echo $error; ?></div>
         <form method="POST">
             <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
             <input class="form-control" type="email" name="email" id="email" placeholder="Email">

@@ -1,5 +1,42 @@
 <?php
-
+if($_POST){
+    $usuario = $_POST['usuario'];
+    $password = $_POST['password'];
+    $error = "";
+    if($usuario and $password){
+        $conexion = mysqli_connect("192.168.0.16", "root", "jpGS1037649970", "midiario");
+        if($conexion){
+            $usuario = mysqli_real_escape_string($conexion, $usuario);
+            $query = "Select password from usuarios where usuario = '".$usuario."'";
+            $resultado = mysqli_query($conexion, $query);
+            if($resultado){
+                if(mysqli_num_rows($resultado) == 1){
+                    $passwordHash = mysqli_fetch_array($resultado)[0];
+                    if(password_verify($password, $passwordHash)){
+                        error_log("Login exitoso");
+                    }else{
+                        $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                            Ups! Verifica el usuario y el password</strong></div>";
+                    }
+                    
+                }else{
+                    $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                        Ups! Verifica el usuario y el password</strong></div>";
+                }
+            }else{
+                $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                    Ha ocurrido un error al conectar</strong></div>";
+            }
+            
+        }else{
+            $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+                No se puede establecer conexión. Intenta más tarde</strong></div>";
+        }
+    }else{
+        $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
+            Ingresa el usuario y el password</strong></div>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +56,7 @@
     
     <div class="container formulario">
         <h1 class="text-dark">Mi diario secreto</h1>
-        <div id="error"></div>
+        <div id="error"><?php echo $error; ?></div>
         <form method="POST">
             <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
             <input class="form-control" type="password" name="password" id="password" placeholder="Password">
