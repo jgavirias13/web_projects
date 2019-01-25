@@ -1,11 +1,12 @@
 <?php
     if($_POST){
+        session_start();
         $usuario = $_POST['usuario'];
         $password = $_POST['password'];
         $email = $_POST['email'];
         $error = "";
         if($usuario and $password and $email){
-            $conexion = mysqli_connect("192.168.0.16", "root", "jpGS1037649970", "midiario");
+            include("config.php");
             if($conexion){
                 $usuario = mysqli_real_escape_string($conexion, $usuario);
                 $password = password_hash($password, PASSWORD_DEFAULT);
@@ -17,7 +18,8 @@
                         ."', '".$password."', '".$email."')";
                     $resultado = mysqli_query($conexion, $query);
                     if($resultado){
-                        error_log("Exitoso!");
+                        $_SESSION['login_user'] = $usuario;
+                        header("Location: welcome.php");
                     }else{
                         $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
                             No se puede establecer conexión. Intenta más tarde</strong></div>";

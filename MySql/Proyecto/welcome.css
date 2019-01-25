@@ -1,0 +1,12 @@
+html, body{
+    height: 100%;
+}
+
+#contenedor{
+    margin-top: 20px;
+    height: 80%;
+}
+
+#area{
+    height: 100%;
+}

@@ -1,10 +1,11 @@
 <?php
 if($_POST){
+    session_start();
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
     $error = "";
     if($usuario and $password){
-        $conexion = mysqli_connect("192.168.0.16", "root", "jpGS1037649970", "midiario");
+        include("config.php");
         if($conexion){
             $usuario = mysqli_real_escape_string($conexion, $usuario);
             $query = "Select password from usuarios where usuario = '".$usuario."'";
@@ -13,7 +14,8 @@ if($_POST){
                 if(mysqli_num_rows($resultado) == 1){
                     $passwordHash = mysqli_fetch_array($resultado)[0];
                     if(password_verify($password, $passwordHash)){
-                        error_log("Login exitoso");
+                        $_SESSION['login_user'] = $usuario;
+                        header("Location: welcome.php");
                     }else{
                         $error = "<div class=\"alert alert-danger\" role=\"alert\" <strong>
                             Ups! Verifica el usuario y el password</strong></div>";
